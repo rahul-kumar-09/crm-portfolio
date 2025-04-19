@@ -1,0 +1,130 @@
+.navbar {
+  background-color: #f8f9fa;
+  padding: 1rem 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 15px 5rem;
+  /* background-color: #28a745; */
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbarBrand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #28a745;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.logo {
+  width: 30px;
+  height: 30px;
+  margin-right: 0.5rem;
+}
+
+.navbarToggler {
+  display: none;
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.navbarTogglerIcon {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: #333;
+  position: relative;
+}
+
+.navbarTogglerIcon::before,
+.navbarTogglerIcon::after {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background-color: #333;
+  left: 0;
+}
+
+.navbarTogglerIcon::before {
+  top: -6px;
+}
+
+.navbarTogglerIcon::after {
+  bottom: -6px;
+}
+
+.navbarNav {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navItem {
+  margin-left: 1.5rem;
+}
+
+.navLink {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  padding: 0.5rem 0;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navLink:hover {
+  color: #28a745;
+}
+
+.adminLogin {
+  border: 1px solid #000;
+  border-radius: 0.3rem;
+  padding: 0.5rem 1rem;
+  margin-left: 1rem;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .navbarToggler {
+    display: block;
+  }
+
+  .navbarNav {
+    display: none;
+    position: absolute;
+    /* top: 100%; */
+    top:70px;
+    left: 0;
+    right: 0;
+    background-color: #f8f9fa;
+    padding: 1rem;
+    flex-direction: column;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbarNav.active {
+    display: flex;
+  }
+
+  .navItem {
+    margin: 0.5rem 0;
+  }
+
+  .adminLogin {
+    margin: 0.5rem 0;
+  }
+} 
